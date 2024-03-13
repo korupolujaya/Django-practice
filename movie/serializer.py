@@ -11,9 +11,9 @@ class ActorSerializer(serializers.ModelSerializer):
 class DirectorSerializer(serializers.ModelSerializer):
     class Meta:
         model = Director
-        fields = ('__all__')
+        exclude=['nationality']
         
 class MovieSerializer(serializers.ModelSerializer):
     class Meta:
         model = MovieName
-        fields = ('__all__')
+        fields = ['mname','director','actor']
